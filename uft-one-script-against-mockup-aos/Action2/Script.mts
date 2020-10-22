@@ -1,4 +1,4 @@
-﻿Dim BrowserExecutable
+﻿Dim BrowserExecutable, rc
 
 ExitAction																					'Comment out this line if you want this action to actually run
 While Browser("CreationTime:=0").Exist(0)   												'Loop to close all open browsers
@@ -24,6 +24,7 @@ AIUtil.FindTextBlock("pvantageDEMO").Click
 'BP:  Login
 '===========================================================================================
 AIUtil("profile").Click
+rc = AIUtil("input", "Username").Exist
 AIUtil("input", "Username").Type "aidemo"
 AIUtil("input", "Password").Type "AIdemo1"
 AIUtil("button", "Sign In").Click
