@@ -25,6 +25,7 @@ AIUtil.FindTextBlock("pvantageDEMO").Click
 '===========================================================================================
 AIUtil("profile").Click
 rc = AIUtil("input", "Username").Exist
+'altnernatively, you could use AIUtil("input", "Username").Highlight
 AIUtil("input", "Username").Type "aidemo"
 AIUtil("input", "Password").Type "AIdemo1"
 AIUtil("button", "Sign In").Click
