@@ -1,4 +1,8 @@
-﻿Dim BrowserExecutable, rc
+﻿Dim BrowserExecutable, rc, oShell
+
+Set oShell = CreateObject ("WSCript.shell")
+oShell.run "powershell -command ""Start-Service mediaserver"""
+Set oShell = Nothing
 
 ExitAction																					'Comment out this line if you want this action to actually run
 While Browser("CreationTime:=0").Exist(0)   													'Loop to close all open browsers
