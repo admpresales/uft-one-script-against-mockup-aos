@@ -30,4 +30,3 @@ AIUtil.SetContext AppContext																'Tell the AI engine to point at the 
 '===========================================================================================
 
 AppContext.Close																			'Close the application at the end of your script
-
